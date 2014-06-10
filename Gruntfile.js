@@ -27,6 +27,21 @@ module.exports = function (grunt) {
         // Project settings
         config: config,
 
+        // ftp deploy
+        ftpush: {
+            build: {
+                auth: {
+                    host: 'ftp.budiharso.info',
+                    port: 21,
+                    authKey: 'hodor'
+                },
+                src: 'dist',
+                dest: '/',
+                simple: true,
+                exclusions: ['.DS_Store', '**.DS_Store']
+            }
+        },
+
         // Watches files for changes and runs tasks based on the changed files
         watch: {
             bower: {
@@ -396,5 +411,10 @@ module.exports = function (grunt) {
         'newer:jshint',
         'test',
         'build'
+    ]);
+
+    grunt.registerTask('deploy', [
+        'build',
+        'ftpush'
     ]);
 };

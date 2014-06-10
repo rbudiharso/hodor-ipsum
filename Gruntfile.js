@@ -189,7 +189,7 @@ module.exports = function (grunt) {
             options: {
                 dest: '<%= config.dist %>'
             },
-            html: '<%= config.app %>/index.html'
+            html: ['<%= config.app %>/index.html', '<%= config.app %>/about.html']
         },
 
         // Performs rewrites based on rev and the useminPrepare configuration
@@ -292,6 +292,12 @@ module.exports = function (grunt) {
                     cwd: 'bower_components/bootstrap/dist',
                     src: ['fonts/*.*'],
                     dest: '<%= config.dist %>'
+                }, {
+                    expand: true,
+                    dot: true,
+                    cwd: 'bower_components/zeroclipboard/dist',
+                    src: ['*.swf'],
+                    dest: '<%= config.dist %>/scripts'
                 }]
             },
             styles: {

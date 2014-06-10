@@ -7,14 +7,18 @@
         <meta name="viewport" content="width=device-width">
         <link rel="shortcut icon" href="/favicon.ico">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
-        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
         <!-- endbower -->
         <!-- endbuild -->
+
         <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/bootstrap.css">
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
+        <link href="http://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="../bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
@@ -29,45 +33,47 @@
         <div class="container">
             <div class="header">
                 <ul class="nav nav-pills pull-right">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li class="active"><a href="/">Hodor</a></li>
+                    <li><a href="/about.html">Hodor</a></li>
                 </ul>
                 <h3 class="text-muted">hodor ipsum</h3>
             </div>
 
-            <div class="jumbotron">
-                <h1>'Allo, 'Allo!</h1>
-                <p class="lead">Always a pleasure scaffolding your apps.</p>
-                <p><a class="btn btn-lg btn-success" href="#">Splendid! <span class="glyphicon glyphicon-ok"></span></a></p>
+            <div class="row">
+                <div class="col-md-12">
+                    <textarea id="hodor" name="hodor" cols="30" rows="10" class="form-control" readonly>hodor</textarea>
+                </div>
             </div>
-
-            <div class="row marketing">
-                <div class="col-lg-6">
-                    <h4>HTML5 Boilerplate</h4>
-                    <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-
-
-
-                    <h4>Bootstrap</h4>
-                    <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-
-                    <h4>Modernizr</h4>
-                    <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-
+            <br>
+            <div class="row">
+                <div class="col-md-10 text-right">
+                    <select id="hodor-paragraph" class="form-control input-lg" name="hodor-paragraph">
+                      <option value="1">1 hodor</option>
+                      <option value="2">2 hodor</option>
+                      <option value="3">3 hodor</option>
+                      <option value="4">4 hodor</option>
+                      <option value="5">5 hodor</option>
+                    </select>
+                </div>
+                <div class="col-md-2 text-right">
+                    <button class="btn btn-success btn-lg copy" title="copy to clipboard" data-clipboard-target="hodor">HODOR</button>
                 </div>
             </div>
 
+            <br>
+
             <div class="footer">
-                <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+                <p>hodor hodor</p>
             </div>
 
         </div>
 
 
+
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <script src="../bower_components/zeroclipboard/dist/ZeroClipboard.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 

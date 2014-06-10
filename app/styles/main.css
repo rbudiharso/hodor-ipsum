@@ -108,3 +108,7 @@ body {
     right: 0px;
     box-shadow: 0 0 3px rgba(0,0,0,0.5);
 }
+
+.fb-like > span {
+  vertical-align: initial !important;
+}

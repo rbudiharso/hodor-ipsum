@@ -210,10 +210,16 @@ module.exports = function (grunt) {
         // Performs rewrites based on rev and the useminPrepare configuration
         usemin: {
             options: {
-                assetsDirs: ['<%= config.dist %>', '<%= config.dist %>/images']
+                assetsDirs: ['<%= config.dist %>', '<%= config.dist %>/images'],
+                patterns: {
+                    meta: [
+                        [/(hodor_ipsum\.png)/, 'Replacing reference to hodor_ipsum.png']
+                    ]
+                }
             },
             html: ['<%= config.dist %>/{,*/}*.html'],
-            css: ['<%= config.dist %>/styles/{,*/}*.css']
+            css: ['<%= config.dist %>/styles/{,*/}*.css'],
+            meta: '<%= config.dist %>/{,*/}*.html'
         },
 
         // The following *-min tasks produce minified files in the dist folder
